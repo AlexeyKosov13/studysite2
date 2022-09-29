@@ -12,6 +12,10 @@
         width: 360px;
     }
 
+    .swiper-scrollbar-drag {
+        background-color: var(--dark-color);
+    }
+
     &__image {
         border-radius: 20px;
         max-height: 500px;
@@ -54,8 +58,25 @@
         @include flex-all-sb;
     }
 
-    &__slider-vtn {
+    &__slider-btns {
+        @include flex-v-center;
+    }
+
+    &__slider-btn {
+        @include bg-cover;
         width: 40px;
         height: 40px;
+
+        &--prev {
+            background-image: url("../img/prev.svg");
+        }
+
+        &--next {
+            background-image: url("../img/next.svg");
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
     }
 }
