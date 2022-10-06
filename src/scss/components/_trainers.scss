@@ -10,6 +10,11 @@
 
     .swiper-slide {
         width: 360px;
+
+        
+        @include mobile {
+           width: 250px;
+        }
     }
 
     .swiper-scrollbar-drag {
@@ -58,8 +63,13 @@
         @include flex-all-sb;
     }
 
-    &__slider-btns {
+    &__btns {
         @include flex-v-center;
+
+        
+        @include mobile {
+           display: none;
+        }
     }
 
     &__slider-btn {
