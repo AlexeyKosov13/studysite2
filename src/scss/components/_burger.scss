@@ -27,3 +27,17 @@
         }
     }
 }
+
+.burger-close {
+    position: absolute;
+    top: 30px;
+    right: var(--container-offset);
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    background-image: url("../../img/close.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px 12px;
+}
