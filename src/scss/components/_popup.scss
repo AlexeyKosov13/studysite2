@@ -6,17 +6,43 @@
     font-size: 18px;
     line-height: 160%;
     color: var(--text-color);
+
+    @include mobile {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.graph-modal {
+    &::before {
+        @include tablet {
+            display: none;
+        }
+    }
 }
 
 .popup {
     padding: 40px;
+    width: 100%;
+    max-width: 940px;
 
     &__top {
         display: flex;
+        margin-bottom: 40px;
+    }
+
+    &__bottom-content {
+        padding-top: 20px;
+        padding-right: 20px;
+        max-height: 375px;
     }
 
     &__image {
         margin-right: 40px;
+
+        @include mobile {
+            margin-right: 20px;
+        }
     }
 
     &__name {
@@ -33,5 +59,95 @@
         line-height: 160%;
         color: var(--text-color);
         margin-bottom: 10px;
+    }
+
+    &__descr {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 20px;
+        line-height: 160%;
+        color: var(--dark-color);
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 160%;
+        margin-bottom: 20px;
+        color: var(--dark-color);
+    }
+
+    .simplebar-track.simplebar-vertical {
+        border-radius: 40px;
+        background-color: rgba(20,16,36,0.08);
+        width: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .simplebar-scrollbar:before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+        width: 5px;
+        border-radius: 40px;
+    }
+
+    @include small-tablet {
+        padding-top: 80px;
+    }
+
+    @include mobile {
+        padding: 20px;
+        padding-top: 50px;
+    }
+}
+
+.tabs {
+
+    &__menu {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(20,16,36,0.11);
+        margin-bottom: 20px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        max-width: 70%;
+        justify-content: space-between;
+
+        &-item {
+            @include mobile {
+                margin-right: 40px;
+                margin-bottom: 20px;
+            }
+        }
+        
+        &-btn {
+            font-size: 20px;
+            line-height: 160%;
+            color: var(--dark-color);
+
+            &:focus {
+                background-color: transparent;
+                color: var(--accent-color);
+            }
+
+            &--active {
+                background-color: transparent;
+                color: var(--accent-color);
+                outline: none;
+
+            }
+        }
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
 }
